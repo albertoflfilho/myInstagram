@@ -2,8 +2,8 @@ const express = require('express');
 
 const routes = new express.Router();
 
-routes.get('/', (req, res) => {
-  return res.send(`myInstagram ${req.query.name}`);
-});
+const PostController = require('./controllers/PostController');
+
+routes.post('/posts', PostController.store);
 
 module.exports = routes;
