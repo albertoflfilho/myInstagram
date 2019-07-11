@@ -1,9 +1,9 @@
 const Post = require('../models/Post');
 
 module.exports = {
-  async indexedDB(req, res) {},
+  async index(req, res) {},
 
-  async StorageEvent(req, res) {
+  async store(req, res) {
     return res.json({ ok: true });
   }
 };
