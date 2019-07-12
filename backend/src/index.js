@@ -5,6 +5,8 @@ const cors = require('cors');
 
 const app = express();
 
+const server = require('http').Server(app);
+
 mongoose.connect(
   'mongodb+srv://albertoflfilho:dbUserPassword@cluster0-iz5hy.mongodb.net/test?retryWrites=true&w=majority',
   { useNewUrlParser: true }
@@ -19,4 +21,4 @@ app.use(
 
 app.use(require('./routes'));
 
-app.listen(3333);
+server.listen(3333);
